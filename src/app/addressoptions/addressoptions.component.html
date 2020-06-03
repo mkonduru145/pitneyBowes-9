@@ -1,0 +1,43 @@
+<p>
+ <!--  <i
+    class="pbi-icon-outline pbi-alert-circle"
+    container="body"
+    placement="right"
+    ngbPopover="{{ address?.Message }}"
+    triggers="mouseenter:mouseleave"
+  ></i
+  > -->&nbsp;It might not be possible to deliver packages &amp; mail to the address
+  you selected. Did you mean to enter one of the following addresses? Select
+  your correct address below to ensure that packages &amp; mail get delivered.
+</p>
+<div
+  class="custom-control custom-checkbox"
+  *ngFor="let address of addressOptions"
+>
+  <input
+    type="checkbox"
+    class="custom-control-input"
+    id="{{ address?.id }}"
+    (change)="changeAddress(address?.index)"
+  />
+  <label class="custom-control-label" for="{{ address?.id }}"
+    ><i
+      *ngIf="address?.DPV != 'Y'"
+      class="pbi-icon-outline pbi-alert-circle"
+      container="body"
+      placement="right"
+      ngbPopover="{{ address?.Message }}"
+      triggers="mouseenter:mouseleave"
+    ></i>
+    <i
+      *ngIf="address?.DPV == 'Y'"
+      class="pbi-icon-mini pbi-check-bold"
+      container="body"
+      placement="right"
+      ngbPopover="{{ address?.Message }}"
+      triggers="mouseenter:mouseleave"
+      style="color: greenyellow;"
+    ></i
+    >&nbsp;{{ address?.FormattedAddressOptions }}</label
+  >
+</div>
