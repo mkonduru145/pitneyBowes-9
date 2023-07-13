@@ -28,7 +28,7 @@
     "core-js": "^2.6.0",
     "jquery": "^3.5.1",
     "ng2-charts": "^1.6.0",
-    "npm": "^6.14.5",
+    "npm": "^9.8.0",
     "pb-design-system": "^5.0.1",
     "popper.js": "^1.14.6",
     "rxjs": "^6.3.3",
@@ -37,7 +37,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular/cli": "~9.1.7",
+    "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "^9.1.9",
     "@angular/language-service": "^9.1.9",
     "@types/jasmine": "~3.3.1",
